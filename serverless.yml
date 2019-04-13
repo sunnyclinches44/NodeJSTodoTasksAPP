@@ -1,0 +1,32 @@
+# serverless.yml
+
+service: todo-task-app
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: ap-southeast-2
+
+functions:
+  app:
+    handler: /server/server.handler
+    events:
+      - http: ANY /
+      - http: 'ANY {proxy+}'
+
+# you can add CloudFormation resource templates here
+#resources:
+Resources:
+  NewResource:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: clinchernodejsbucket
+Outputs:
+  NewOutput:
+    Description: "Description for the output"
+    Value: "Some output value"
+
+# plugins
+plugins:
+  - serverless-offline

@@ -1,0 +1,12 @@
+{
+    "development":  {
+        "PORT": 3000,
+        "MONGODB_URI": "mongodb+srv://PostAppAdminUser:bORcG58Qu3whZl2V@cluster0-xgobp.mongodb.net/TodoApp",
+        "JWT_TOKEN": "abc123"
+    },
+    "test":  {
+        "PORT": 3000,
+        "MONGODB_URI": "mongodb+srv://PostAppAdminUser:bORcG58Qu3whZl2V@cluster0-xgobp.mongodb.net/TodoAppTest",
+        "JWT_TOKEN": "abc123"
+    }
+}
